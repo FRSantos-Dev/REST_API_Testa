@@ -49,6 +49,10 @@ public class DAO <E> {
         return this.abrirTransacao().incluir(entidade).fecharTransacao();
     }
 
+    public E obterPorID(Object id){
+        return em.find(classe, id);
+    }
+
     public List<E> obterTodos(){//Sobrecarga de método.
         return this.obterTodos(10, 0);
     }
