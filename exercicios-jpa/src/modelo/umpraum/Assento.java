@@ -17,22 +17,17 @@ public class Assento {
 
     private String nome;
 
+    @OneToOne(mappedBy = "")
+    private Cliente cliente;
+
     public Assento() {
 
     }
 
-    public Assento(Long id, String nome) {
-        this.id = id;
+    public Assento(String nome) {
         this.nome = nome;
     }
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public String getNome() {
         return nome;
@@ -40,6 +35,14 @@ public class Assento {
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public Cliente getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
     }
 
 }
