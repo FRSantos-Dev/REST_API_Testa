@@ -49,6 +49,11 @@ public class DAO <E> {
         return this.abrirTransacao().incluir(entidade).fecharTransacao();
     }
 
+    public List<E> obterTodos(){//Sobrecarga de método.
+        return this.obterTodos(10, 0);
+    }
+
+
     public List<E> obterTodos(int qtde, int deslocamento){
         if(classe == null){
             throw new UnsupportedOperationException("Classe nula.");
