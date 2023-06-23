@@ -69,4 +69,7 @@ public class DAO <E> {
         query.setFirstResult(deslocamento);
         return query.getResultList();
     }
+
+    public void fechar() {
+    }
 }
