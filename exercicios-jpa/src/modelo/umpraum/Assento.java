@@ -45,4 +45,8 @@ public class Assento {
         this.cliente = cliente;
     }
 
+    public Assento getAssento() {
+        return null;
+    }
+
 }
