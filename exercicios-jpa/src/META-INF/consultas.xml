@@ -11,6 +11,10 @@ xsi:schemaLocation="<http://xmlns.jcp.org/xml/ns/persistence/orm>
             join fetch f.atores
             where f.nota > :nota
         </query>
-    <named-query>
+    </named-query>
 
+    <sql-result-set-mapping name="NotaFilmeMap">
+        <constructor-result target-class="modelo.consulta.NotaFilme">
+        <column name="media" class="java.lang.Double" />
+        </constructor-result>
 </entity-mapping>        
